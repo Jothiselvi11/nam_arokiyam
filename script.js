@@ -23,6 +23,38 @@ const OILS = {
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
+/* ---------- Language (English / Tamil) ---------- */
+// English text is read from the page itself; Tamil comes from i18n.js.
+const TA = window.I18N_TA || {};
+const EN = {
+  "meta.title": document.title,
+  "why.gingelly": OILS.gingelly.why,
+  "why.coconut": OILS.coconut.why,
+  "why.groundnut": OILS.groundnut.why,
+  "err.name": "Please tell us your name.",
+  "err.phone": "Please enter a valid phone number."
+};
+$$("[data-i18n]").forEach(el => { EN[el.dataset.i18n] ??= el.innerHTML; });
+$$("[data-i18n-ph]").forEach(el => { EN[el.dataset.i18nPh] ??= el.placeholder; });
+
+let lang = "en";
+const t = key => (lang === "ta" && TA[key]) || EN[key] || "";
+
+function setLang(next) {
+  lang = next === "ta" ? "ta" : "en";
+  document.documentElement.lang = lang;
+  document.title = t("meta.title");
+  $$("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+  $$("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  $$("#langSwitch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  // refresh text that JS writes at runtime
+  if (matchKey) $("#resultWhy").textContent = t("why." + matchKey);
+  const err = $("#formError");
+  if (err && err.dataset.key) err.textContent = t(err.dataset.key);
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+$$("#langSwitch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
 /* ---------- Nav ---------- */
 const nav = $("#nav");
 const floatWa = $(".float-wa");
@@ -113,9 +145,11 @@ $("#resultBtn").addEventListener("click", e => prefill(e.currentTarget.dataset.p
 /* ---------- Oil finder ---------- */
 const chips = $$(".chip");
 const result = $("#finderResult");
+let matchKey = null;
 chips.forEach(chip => chip.addEventListener("click", () => {
   chips.forEach(c => c.classList.toggle("is-active", c === chip));
   const key = chip.dataset.match;
+  matchKey = key;
   const oil = OILS[key];
   result.dataset.oil = "none";               // retrigger pop animation
   void result.offsetWidth;
@@ -124,7 +158,7 @@ chips.forEach(chip => chip.addEventListener("click", () => {
   $("#resultImg").alt = oil.name + " bottle";
   $("#resultName").textContent = oil.name;
   $("#resultTa").textContent = oil.ta;
-  $("#resultWhy").textContent = oil.why;
+  $("#resultWhy").textContent = t("why." + key);
   $("#resultBtn").dataset.product = oil.name;
 }));
 
@@ -146,9 +180,11 @@ $("#orderForm").addEventListener("submit", e => {
   const phoneOk = /^[0-9+\s-]{10,15}$/.test(phone);
   f.phone.classList.toggle("invalid", !phoneOk);
   if (!name || !phoneOk) {
-    err.textContent = !name ? "Please tell us your name." : "Please enter a valid phone number.";
+    err.dataset.key = !name ? "err.name" : "err.phone";
+    err.textContent = t(err.dataset.key);
     return;
   }
+  delete err.dataset.key;
   err.textContent = "";
   const q = Math.max(1, parseInt(f.qty.value, 10) || 1);
   const lines = [
@@ -192,3 +228,6 @@ function countUp(el) {
 /* ---------- Footer year + phone link ---------- */
 $("#year").textContent = new Date().getFullYear();
 $$(".js-phone").forEach(a => (a.href = `tel:+${WHATSAPP_NUMBER}`));
+
+/* ---------- Apply saved language ---------- */
+setLang(document.documentElement.lang === "ta" ? "ta" : "en");
