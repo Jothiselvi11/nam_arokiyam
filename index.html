@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nam Arokiyam | Cold Pressed Oils by Pradeebha Oil Trading Company</title>
+  <meta name="description" content="Nam Arokiyam (நம் ஆரோக்கியம்) — traditional cold pressed Gingelly, Coconut and Groundnut oils from Pradeebha Oil Trading Company. Trusted since 1989. Available in 500 ml and 1 litre." />
+  <meta name="theme-color" content="#23160b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-oil="gingelly">
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Nam Arokiyam home">
+      <span class="brand-drop" aria-hidden="true">
+        <svg viewBox="0 0 32 40"><path d="M16 1C16 1 2 18 2 26a14 14 0 0 0 28 0C30 18 16 1 16 1Z"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-ta">நம் ஆரோக்கியம்</span>
+        <span class="brand-en">Nam Arokiyam</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#story">Our Story</a>
+      <a href="#oils">Oils</a>
+      <a href="#process">The Chekku Way</a>
+      <a href="#finder">Oil Finder</a>
+      <a href="#order" class="btn btn-sm btn-dark">Order Now</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-watermark" aria-hidden="true">ஆரோக்கியம்</div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Pradeebha Oil Trading Co. · Since 1989</p>
+        <h1 class="hero-title">
+          Pressed <em>slow.</em><br />
+          Poured <span class="underline">pure.</span>
+        </h1>
+        <p class="hero-sub">
+          Wood-pressed oils the way our grandmothers knew them — no heat, no chemicals,
+          nothing hidden. Just seeds, patience and the gentle turn of the <strong>chekku</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#oils" class="btn btn-oil">Explore the oils
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#order" class="btn btn-ghost">Order on WhatsApp</a>
+        </div>
+
+        <div class="hero-switch" role="tablist" aria-label="Choose an oil">
+          <button role="tab" class="switch-btn is-active" data-oil="gingelly" aria-selected="true">
+            <span class="sw" style="--c:#2b3a8f"></span>Gingelly
+          </button>
+          <button role="tab" class="switch-btn" data-oil="coconut" aria-selected="false">
+            <span class="sw" style="--c:#3f7d3a"></span>Coconut
+          </button>
+          <button role="tab" class="switch-btn" data-oil="groundnut" aria-selected="false">
+            <span class="sw" style="--c:#e6b800"></span>Groundnut
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="stage-circle"></div>
+        <svg class="stage-ring" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <path id="ringPath" d="M200,200 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0" />
+          </defs>
+          <text><textPath href="#ringPath">COLD PRESSED ✦ மரச்செக்கு ✦ 100% PURE &amp; NATURAL ✦ NO CHEMICALS ✦ SINCE 1989 ✦</textPath></text>
+        </svg>
+        <div class="stage-bottles">
+          <figure class="bottle is-active" data-oil="gingelly">
+            <div class="crop"><img src="assets/gingelly-bottle.webp" alt="Nam Arokiyam cold pressed Gingelly Oil bottle" /></div>
+          </figure>
+          <figure class="bottle" data-oil="coconut">
+            <div class="crop"><img src="assets/coconut-bottle.webp" alt="Nam Arokiyam Coconut Oil bottle" /></div>
+          </figure>
+          <figure class="bottle" data-oil="groundnut">
+            <div class="crop"><img src="assets/groundnut-bottle.webp" alt="Nam Arokiyam Groundnut Oil bottle" /></div>
+          </figure>
+        </div>
+        <div class="stage-tag">
+          <span class="stage-tag-ta" id="heroTa">நல்லெண்ணெய்</span>
+          <span class="stage-tag-en" id="heroEn">Gingelly Oil</span>
+        </div>
+        <div class="drip drip-1" aria-hidden="true"></div>
+        <div class="drip drip-2" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Cold Pressed</span><i>✦</i><span class="ta">மரச்செக்கு எண்ணெய்</span><i>✦</i>
+        <span>Zero Chemicals</span><i>✦</i><span>Unrefined</span><i>✦</i>
+        <span class="ta">நம் ஆரோக்கியம்</span><i>✦</i><span>Trusted Since 1989</span><i>✦</i>
+        <span>Cold Pressed</span><i>✦</i><span class="ta">மரச்செக்கு எண்ணெய்</span><i>✦</i>
+        <span>Zero Chemicals</span><i>✦</i><span>Unrefined</span><i>✦</i>
+        <span class="ta">நம் ஆரோக்கியம்</span><i>✦</i><span>Trusted Since 1989</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story" id="story">
+      <div class="story-year reveal" aria-hidden="true">
+        <span>19</span><span>89</span>
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow">Our Story</p>
+        <h2>A family promise,<br /><em>poured into every bottle.</em></h2>
+        <p>
+          Pradeebha Oil Trading Company began in 1989 with a simple belief — the oil in your
+          kitchen should be as honest as the food you cook with it. Decades later, that belief
+          lives on as <strong>Nam Arokiyam</strong>, which means <em>“Our Health”</em>.
+        </p>
+        <p>
+          We still press the old way: carefully chosen seeds, crushed slowly in a wooden
+          <em>marachekku</em> so the oil never overheats. What reaches your table keeps its
+          natural aroma, colour and goodness — exactly as nature made it.
+        </p>
+        <div class="stats">
+          <div class="stat"><span class="num" data-count="37">0</span><span class="plus">+</span><p>Years of trust</p></div>
+          <div class="stat"><span class="num" data-count="3">0</span><p>Pure oils</p></div>
+          <div class="stat"><span class="num" data-count="0">0</span><p>Chemicals added</p></div>
+          <div class="stat"><span class="num" data-count="100">0</span><span class="plus">%</span><p>Natural</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OILS ============ -->
+    <section class="oils" id="oils">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Trio</p>
+        <h2>Three oils. <em>One promise.</em></h2>
+        <p>Pick your oil, pick your size — every bottle comes in <strong>500 ml</strong> and <strong>1 litre</strong>.</p>
+      </div>
+
+      <div class="oil-grid">
+        <!-- Gingelly -->
+        <article class="oil-card reveal" data-oil="gingelly" style="--accent:#2b3a8f; --tint:#e9ecfb; --glow:#f3b81f">
+          <div class="oil-visual">
+            <span class="oil-num">01</span>
+            <div class="crop"><img src="assets/gingelly-bottle.webp" alt="Gingelly Oil bottle" loading="lazy" /></div>
+          </div>
+          <div class="oil-body">
+            <p class="oil-ta">நல்லெண்ணெய்</p>
+            <h3>Gingelly Oil</h3>
+            <p class="oil-desc">Cold-pressed from sun-dried sesame seeds. Deep, nutty and golden — the soul of Tamil kitchens, from kuzhambu to the Sunday oil bath.</p>
+            <ul class="tags">
+              <li>Tempering</li><li>Kuzhambu &amp; Idli podi</li><li>Oil bath</li>
+            </ul>
+            <div class="size-toggle" role="radiogroup" aria-label="Gingelly oil size">
+              <button class="is-active" data-size="1 Litre" role="radio" aria-checked="true">1 L</button>
+              <button data-size="500 ml" role="radio" aria-checked="false">500 ml</button>
+              <span class="pill"></span>
+            </div>
+            <a href="#order" class="btn btn-card" data-product="Gingelly Oil">Order this
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Coconut -->
+        <article class="oil-card reveal" data-oil="coconut" style="--accent:#3f7d3a; --tint:#e7f2e2; --glow:#cfe6a3">
+          <div class="oil-visual">
+            <span class="oil-num">02</span>
+            <div class="crop"><img src="assets/coconut-bottle.webp" alt="Coconut Oil bottle" loading="lazy" /></div>
+          </div>
+          <div class="oil-body">
+            <p class="oil-ta">தேங்காய் எண்ணெய்</p>
+            <h3>Coconut Oil</h3>
+            <p class="oil-desc">Pressed from dried copra for a clean, light and naturally fragrant oil. Perfect for cooking, and a family favourite for hair and skin care.</p>
+            <ul class="tags">
+              <li>Kerala-style cooking</li><li>Hair care</li><li>Skin care</li>
+            </ul>
+            <div class="size-toggle" role="radiogroup" aria-label="Coconut oil size">
+              <button class="is-active" data-size="1 Litre" role="radio" aria-checked="true">1 L</button>
+              <button data-size="500 ml" role="radio" aria-checked="false">500 ml</button>
+              <span class="pill"></span>
+            </div>
+            <a href="#order" class="btn btn-card" data-product="Coconut Oil">Order this
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Groundnut -->
+        <article class="oil-card reveal" data-oil="groundnut" style="--accent:#c98a00; --tint:#fff5cf; --glow:#ffd84a">
+          <div class="oil-visual">
+            <span class="oil-num">03</span>
+            <div class="crop"><img src="assets/groundnut-bottle.webp" alt="Groundnut Oil bottle" loading="lazy" /></div>
+          </div>
+          <div class="oil-body">
+            <p class="oil-ta">கடலை எண்ணெய்</p>
+            <h3>Groundnut Oil</h3>
+            <p class="oil-desc">Bright, rich and full-bodied, pressed from handpicked peanuts. Holds up beautifully to high heat — made for crispy vadai and everyday frying.</p>
+            <ul class="tags">
+              <li>Deep frying</li><li>Everyday cooking</li><li>Sweets &amp; snacks</li>
+            </ul>
+            <div class="size-toggle" role="radiogroup" aria-label="Groundnut oil size">
+              <button class="is-active" data-size="1 Litre" role="radio" aria-checked="true">1 L</button>
+              <button data-size="500 ml" role="radio" aria-checked="false">500 ml</button>
+              <span class="pill"></span>
+            </div>
+            <a href="#order" class="btn btn-card" data-product="Groundnut Oil">Order this
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="process">
+      <div class="section-head light reveal">
+        <p class="eyebrow">The Chekku Way</p>
+        <h2>From seed to seal,<br /><em>nothing rushed.</em></h2>
+        <p>Refined oils are made with heat and solvents. Ours are made with time.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="16" cy="28" rx="6" ry="9"/><ellipse cx="32" cy="22" rx="6" ry="9"/><ellipse cx="26" cy="36" rx="5" ry="7"/></svg>
+          </div>
+          <span class="step-no">01</span>
+          <h3>Select</h3>
+          <p>Only clean, mature seeds and copra make the cut — sorted by hand.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M10 38l4-4M34 14l4-4"/></svg>
+          </div>
+          <span class="step-no">02</span>
+          <h3>Sun-dry</h3>
+          <p>Dried naturally under the sun to bring out the true flavour of the seed.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 44h20l-3-26H17z"/><path d="M24 18V6M12 8h24"/></svg>
+          </div>
+          <span class="step-no">03</span>
+          <h3>Wood-press</h3>
+          <p>Crushed slowly in a wooden chekku. Low friction, low heat — nutrients stay in.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6s-12 14-12 22a12 12 0 0 0 24 0C36 20 24 6 24 6Z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>
+          </div>
+          <span class="step-no">04</span>
+          <h3>Settle</h3>
+          <p>Left to rest and settle naturally. No bleaching, no refining, no shortcuts.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 4h8v6h-8zM18 10h12l2 6v26a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V16z"/><path d="M16 26h16"/></svg>
+          </div>
+          <span class="step-no">05</span>
+          <h3>Seal</h3>
+          <p>Filtered, bottled and sealed fresh in 500 ml and 1 litre packs.</p>
+        </li>
+      </ol>
+
+      <div class="compare reveal">
+        <div class="compare-col bad">
+          <h4>Refined oil</h4>
+          <ul>
+            <li>Extracted with high heat</li>
+            <li>Chemical solvents used</li>
+            <li>Bleached &amp; deodorised</li>
+            <li>Natural aroma lost</li>
+          </ul>
+        </div>
+        <div class="compare-vs">vs</div>
+        <div class="compare-col good">
+          <h4>Nam Arokiyam</h4>
+          <ul>
+            <li>Slow wooden-press extraction</li>
+            <li>Zero chemicals, ever</li>
+            <li>Unrefined &amp; unbleached</li>
+            <li>Natural aroma &amp; colour kept</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OIL FINDER ============ -->
+    <section class="finder" id="finder">
+      <div class="finder-inner">
+        <div class="finder-left reveal">
+          <p class="eyebrow">Oil Finder</p>
+          <h2>What’s cooking <em>today?</em></h2>
+          <p>Tap a dish or a ritual — we’ll tell you which Nam Arokiyam oil it loves.</p>
+          <div class="chips" id="chips">
+            <button class="chip" data-match="groundnut">🍤 Deep frying</button>
+            <button class="chip" data-match="gingelly">🍛 Kuzhambu &amp; tempering</button>
+            <button class="chip" data-match="coconut">🥥 Kerala-style dishes</button>
+            <button class="chip" data-match="gingelly">🌿 Sunday oil bath</button>
+            <button class="chip" data-match="coconut">💆 Hair &amp; skin care</button>
+            <button class="chip" data-match="groundnut">🥘 Everyday sautéing</button>
+            <button class="chip" data-match="gingelly">🌶️ Idli podi &amp; pickles</button>
+            <button class="chip" data-match="groundnut">🍬 Sweets &amp; snacks</button>
+          </div>
+        </div>
+        <div class="finder-result reveal" id="finderResult" data-oil="none">
+          <div class="result-empty">
+            <svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16 1 2 18 2 26a14 14 0 0 0 28 0C30 18 16 1 16 1Z"/></svg>
+            <p>Your perfect match<br />appears here</p>
+          </div>
+          <div class="result-full">
+            <div class="crop"><img id="resultImg" src="assets/gingelly-bottle.webp" alt="" /></div>
+            <div>
+              <p class="result-label">Your match</p>
+              <h3 id="resultName">Gingelly Oil</h3>
+              <p class="oil-ta" id="resultTa">நல்லெண்ணெய்</p>
+              <p id="resultWhy">The classic choice for South Indian cooking.</p>
+              <a href="#order" class="btn btn-dark btn-sm" id="resultBtn" data-product="Gingelly Oil">Order this oil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER ============ -->
+    <section class="order" id="order">
+      <div class="order-card reveal">
+        <div class="order-info">
+          <p class="eyebrow">Order &amp; Enquiries</p>
+          <h2>Bring home<br /><em>the real thing.</em></h2>
+          <p>Fill in the details and we’ll take it from there on WhatsApp. Retail, bulk and dealer enquiries are all welcome.</p>
+
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span><small>Call / WhatsApp</small><a href="tel:+910000000000" class="js-phone">+91 00000 00000</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none"/><path d="M4 6l8 7 8-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+              <span><small>Email</small><a href="mailto:info@namarokiyam.com">info@namarokiyam.com</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><small>Visit us</small>Pradeebha Oil Trading Company,<br />Your street address, City – PIN</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="field">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" placeholder="e.g. Lakshmi" required />
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone number</label>
+            <input id="fPhone" name="phone" type="tel" placeholder="10-digit mobile" required />
+          </div>
+          <div class="field">
+            <span class="label">Choose oil</span>
+            <div class="radio-cards" id="productPick">
+              <label><input type="radio" name="product" value="Gingelly Oil" checked /><span><i style="--c:#2b3a8f"></i>Gingelly</span></label>
+              <label><input type="radio" name="product" value="Coconut Oil" /><span><i style="--c:#3f7d3a"></i>Coconut</span></label>
+              <label><input type="radio" name="product" value="Groundnut Oil" /><span><i style="--c:#e6b800"></i>Groundnut</span></label>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <span class="label">Size</span>
+              <div class="radio-cards two" id="sizePick">
+                <label><input type="radio" name="size" value="1 Litre" checked /><span>1 L</span></label>
+                <label><input type="radio" name="size" value="500 ml" /><span>500 ml</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Quantity</span>
+              <div class="qty">
+                <button type="button" data-step="-1" aria-label="Decrease quantity">−</button>
+                <input id="fQty" name="qty" type="number" min="1" max="999" value="1" aria-label="Quantity" />
+                <button type="button" data-step="1" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fNote">Anything else? <small>(optional)</small></label>
+            <textarea id="fNote" name="note" rows="2" placeholder="Delivery area, bulk order, dealership…"></textarea>
+          </div>
+          <p class="form-error" id="formError" role="alert"></p>
+          <button type="submit" class="btn btn-whatsapp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Send order on WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-big" aria-hidden="true">நம் ஆரோக்கியம் நம் கையில்</div>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Nam Arokiyam</p>
+        <p class="footer-muted">A trademark of Pradeebha Oil Trading Company.<br />Pure, cold pressed oils — since 1989.</p>
+      </div>
+      <div>
+        <p class="footer-h">Oils</p>
+        <a href="#oils">Gingelly Oil</a>
+        <a href="#oils">Coconut Oil</a>
+        <a href="#oils">Groundnut Oil</a>
+      </div>
+      <div>
+        <p class="footer-h">Explore</p>
+        <a href="#story">Our Story</a>
+        <a href="#process">The Chekku Way</a>
+        <a href="#finder">Oil Finder</a>
+      </div>
+      <div>
+        <p class="footer-h">Get in touch</p>
+        <a href="#order">Order on WhatsApp</a>
+        <a href="mailto:info@namarokiyam.com">info@namarokiyam.com</a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Pradeebha Oil Trading Company. All rights reserved.</p>
+  </footer>
+
+  <a href="#order" class="float-wa" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
