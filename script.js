@@ -46,14 +46,14 @@ function setLang(next) {
   document.title = t("meta.title");
   $$("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
   $$("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-  $$("#langSwitch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  $$(".lang-switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
   // refresh text that JS writes at runtime
   if (matchKey) $("#resultWhy").textContent = t("why." + matchKey);
   const err = $("#formError");
   if (err && err.dataset.key) err.textContent = t(err.dataset.key);
   try { localStorage.setItem("lang", lang); } catch (e) {}
 }
-$$("#langSwitch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+$$(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
 /* ---------- Nav ---------- */
 const nav = $("#nav");
