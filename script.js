@@ -67,16 +67,19 @@ window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
 const navToggle = $("#navToggle");
-navToggle.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
+function setMenu(open) {
+  nav.classList.toggle("open", open);
   navToggle.setAttribute("aria-expanded", open);
-  document.body.style.overflow = open ? "hidden" : "";
-});
-$$("#navLinks a").forEach(a => a.addEventListener("click", () => {
-  nav.classList.remove("open");
-  navToggle.setAttribute("aria-expanded", "false");
-  document.body.style.overflow = "";
-}));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+navToggle.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+$$("#navLinks a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+document.addEventListener("click", e => { if (!nav.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+// hide the floating WhatsApp button while the order form is on screen (it covered the submit button)
+new IntersectionObserver(([en]) => floatWa.classList.toggle("hide", en.isIntersecting), { threshold: 0.1 })
+  .observe($("#order"));
 
 /* ---------- Hero oil switcher ---------- */
 const switchBtns = $$(".switch-btn");
@@ -202,28 +205,15 @@ $("#orderForm").addEventListener("submit", e => {
   window.open(url, "_blank", "noopener");
 });
 
-/* ---------- Reveal on scroll + counters ---------- */
+/* ---------- Reveal on scroll ---------- */
 const io = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (!en.isIntersecting) return;
     en.target.classList.add("in");
-    $$("[data-count]", en.target).forEach(countUp);
     io.unobserve(en.target);
   });
 }, { threshold: 0.15 });
 $$(".reveal").forEach(el => io.observe(el));
-
-function countUp(el) {
-  const end = Number(el.dataset.count);
-  if (reduceMotion || end === 0) { el.textContent = end; return; }
-  const dur = 1400, t0 = performance.now();
-  const tick = t => {
-    const p = Math.min(1, (t - t0) / dur);
-    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-    if (p < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
 
 /* ---------- Footer year + phone link ---------- */
 $("#year").textContent = new Date().getFullYear();
